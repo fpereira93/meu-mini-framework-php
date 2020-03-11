@@ -1,0 +1,29 @@
+.table.addresses-list tr > th:nth-child(1),
+.table.addresses-list tr > td:nth-child(1) {
+    width: calc(16.666% - 620px);
+}
+
+.table.addresses-list tr > th:nth-child(2),
+.table.addresses-list tr > td:nth-child(2) {
+    width: 100px;
+}
+
+.table.addresses-list tr > th:nth-child(3),
+.table.addresses-list tr > td:nth-child(3) {
+    width: 70px;
+}
+
+.table.addresses-list tr > th:nth-child(4),
+.table.addresses-list tr > td:nth-child(4) {
+    width: 125px;
+}
+
+.table.addresses-list tr > th:nth-child(5),
+.table.addresses-list tr > td:nth-child(5) {
+    width: 250px;
+}
+
+.table.addresses-list tr > th:nth-child(6),
+.table.addresses-list tr > td:nth-child(6) {
+    width: 110px !important;
+}

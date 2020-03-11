@@ -1,0 +1,29 @@
+.table.customer-list tr > th:nth-child(1),
+.table.customer-list tr > td:nth-child(1) {
+    width: calc(100% - 650px);
+}
+
+.table.customer-list tr > th:nth-child(2),
+.table.customer-list tr > td:nth-child(2) {
+    width: 120px;
+}
+
+.table.customer-list tr > th:nth-child(3),
+.table.customer-list tr > td:nth-child(3) {
+    width: 145px;
+}
+
+.table.customer-list tr > th:nth-child(4),
+.table.customer-list tr > td:nth-child(4) {
+    width: 120px;
+}
+
+.table.customer-list tr > th:nth-child(5),
+.table.customer-list tr > td:nth-child(5) {
+    width: 150px;
+}
+
+.table.customer-list tr > th:nth-child(6),
+.table.customer-list tr > td:nth-child(6) {
+    width: 115px;
+}

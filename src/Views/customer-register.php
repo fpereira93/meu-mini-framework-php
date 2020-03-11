@@ -3,6 +3,8 @@
     include_once('templates/header.php');
 ?>
 
+<link href="./public/css/customers-register.css" rel="stylesheet">
+
 <script src="./public/js/customers-register.js"></script>
 
 <div class="col-md-12" ng-app="app" ng-controller="CustomerRegisterController as ctrl">
@@ -22,7 +24,7 @@
                 <div class="row">
                     <div class="col-sm-6 pb-3">
                         <label for="street-address">Street</label>
-                        <input ng-model="ctrl.modal.data.street" type="text" class="form-control" id="street-address" maxlength="100" placeholder="Street" ng-class="{'error': ctrl.modal.errors['street']}">
+                        <input ng-model="ctrl.modal.data.street" type="text" class="form-control" id="street-address" maxlength="50" placeholder="Street" ng-class="{'error': ctrl.modal.errors['street']}">
 
                         <div ng-if="ctrl.modal.errors['street']" class="message error">{{ctrl.modal.errors['street']}}</div>
                     </div>
@@ -80,7 +82,7 @@
     <div class="form-row mt-4 mb-4">
         <div class="col-sm-9 pb-3">
             <label for="name">Name</label>
-            <input ng-model="ctrl.data_register.name" type="text" class="form-control" id="name" maxlength="200" placeholder="Name" ng-class="{'error' : ctrl.errors['name']}">
+            <input ng-model="ctrl.data_register.name" type="text" class="form-control" id="name" maxlength="50" placeholder="Name" ng-class="{'error' : ctrl.errors['name']}">
 
             <div ng-if="ctrl.errors['name']" class="message error">{{ctrl.errors['name']}}</div>
         </div>
@@ -121,23 +123,24 @@
     <h3>Addresses</h3>
     <hr>
 
-    <table class="table" ng-show="ctrl.adresses_list.length">
+    <table class="table addresses-list" ng-show="ctrl.adresses_list.length">
         <thead class="thead-light">
             <tr>
-                <th>Street name</th>
-                <th>Number</th>
-                <th>State</th>
-                <th>Postal Code</th>
-                <th colspan="2">Country</th>
+                <th class="truncate">Street name</th>
+                <th class="truncate">Number</th>
+                <th class="truncate">State</th>
+                <th class="truncate">Postal Code</th>
+                <th class="truncate">Country</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="adresse in ctrl.adresses_list">
-                <td>{{adresse.street}}</td>
-                <td>{{adresse.number}}</td>
-                <td>{{adresse.state}}</td>
-                <td>{{ctrl.formatPostalCode(adresse.postal_code)}}</td>
-                <td>{{adresse.country}}</td>
+                <td class="truncate" title="{{adresse.street}}">{{adresse.street}}</td>
+                <td class="truncate" title="{{adresse.number}}">{{adresse.number}}</td>
+                <td class="truncate" title="{{adresse.state}}">{{adresse.state}}</td>
+                <td class="truncate" title="{{ctrl.formatPostalCode(adresse.postal_code)}}">{{ctrl.formatPostalCode(adresse.postal_code)}}</td>
+                <td class="truncate" title="{{adresse.country}}">{{adresse.country}}</td>
                 <td class="text-center">
                     <button title="Delete" class="btn" ng-click="ctrl.removeAdresse(adresse)">
                         <i class="icon-trash"></i></i>
