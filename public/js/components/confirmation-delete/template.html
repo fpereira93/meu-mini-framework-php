@@ -1,0 +1,12 @@
+<modal-app show="$ctrl.show">
+    <div class="modal-header">
+        <h5 class="modal-title">Confirmation</h5>
+    </div>
+    <div class="modal-body">
+        <span>{{$ctrl.message}}</span>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" ng-click="$ctrl.confirm()">Confirm</button>
+        <button type="button" class="btn btn-primary" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</modal-app>
